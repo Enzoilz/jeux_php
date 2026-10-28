@@ -28,17 +28,17 @@ This project focuses on the following skills:
 
 - Start a new game.
 - Display the survivor's current status.
-- Preserve the necessary game information between requests.
+- Preserve game information between requests.
 - Restart a game.
 
 ### Resource Management
 
 The player must manage four main resources:
 
-- **Health:** represents the survivor's physical condition.
-- **Energy:** determines the survivor's ability to perform actions.
-- **Food:** provides the resources needed to satisfy hunger.
-- **Materials:** are used to repair and maintain the shelter.
+- **Health:** Represents the survivor's physical condition.
+- **Energy:** Determines the survivor's ability to perform actions.
+- **Food:** Provides the resources needed to satisfy hunger.
+- **Materials:** Are used to repair and maintain the shelter.
 
 ### Available Actions
 
@@ -56,18 +56,18 @@ Each action affects the survivor's resources according to the game's rules.
 - Manage hunger and food consumption.
 - Advance through the days.
 - Apply the consequences of player actions to resources.
-- Trigger a defeat when health reaches zero.
-- Trigger a victory after surviving 30 days.
+- Trigger defeat when health reaches zero.
+- Trigger victory after surviving 30 days.
 
 ## Technologies
 
-- **PHP:** game logic and request handling.
-- **MySQL:** database management and data storage.
-- **PDO:** database access.
-- **HTML5:** page structure and forms.
-- **Twig:** template rendering.
-- **PHP Sessions:** maintaining necessary information between requests.
-- **Git:** source code version control.
+- **PHP:** Game logic and request handling.
+- **MySQL:** Database management and data storage.
+- **PDO:** Database access.
+- **HTML5:** Page structure and forms.
+- **Twig:** Template rendering.
+- **PHP Sessions:** Maintaining game state between requests.
+- **Git:** Source code version control.
 
 ## Project Structure
 
@@ -101,7 +101,7 @@ The final project structure will be documented as development progresses.
 
 3. Create a MySQL database.
 
-4. Execute the SQL database creation script, which will be available in the `sql/` directory once created.
+4. Execute the SQL database creation script from the `sql/` directory once it is available.
 
 5. Configure the database connection settings according to the project configuration.
 
@@ -111,21 +111,19 @@ The final project structure will be documented as development progresses.
    php -S localhost:8000 -t public
    ```
 
-7. Open the application in your browser:
+7. Open the application in your browser at `http://localhost:8000`.
 
-   `http://localhost:8000`
-
-The installation steps may be updated to reflect the final project configuration.
+The installation steps may be updated as the project evolves.
 
 ## Database Design
 
 The database design will include:
 
-- An ERD (Entity-Relationship Diagram) or conceptual data model.
+- An entity-relationship diagram or conceptual data model.
 - A logical data model.
 - An SQL script to create the required database tables.
 
-The schema will be designed according to the application's data persistence requirements, including game state and any optional action history.
+The schema will be designed according to the application's data persistence requirements, including game state and optional action history.
 
 ## Security
 
