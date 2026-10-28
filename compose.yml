@@ -1,0 +1,25 @@
+name: JeuxPHP
+services:
+  API:
+    build: .
+    working_dir: /usr/app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/app
+    command: php -init
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+  db:
+    image: mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=${DATABASENAME}
+      - MYSQL_USER=${DATABASEUSER}
+      - MYSQL_PASSWORD=${DATABASEPASSWORD}
+      -
