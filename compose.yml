@@ -1,29 +1,29 @@
-name: JeuxPHP
-services:
-  api:
-    build: .
-    working_dir: /usr/app
-    ports:
-      - "3000:3000"
-    volumes:
-      - .:/usr/app
-    command: php -init
-    env_file:
-      - .env
-  db:
-    image: mysql:8.0
-    restart: always
-    ports:
-      - "3306:3306"
-    environment:
-      - MYSQL_ROOT_PASSWORD=${DATABASE_ROOT}
-      - MYSQL_DATABASE=${DATABASE_NAME}
-      - MYSQL_USER=${DATABASE_USER}
-      - MYSQL_PASSWORD=${DATABASE_PASSWORD}
-    volumes:
-      - mysql_data:/var/lib/mysql
-    env_file:
-      - .env
+  name: JeuxPHPx
+  services:
+    api:
+      build: .
+      working_dir: /usr/app
+      ports:
+        - "3000:3000"
+      volumes:
+        - .:/usr/app
+      command: php -S 0.0.0.0:3000
+      env_file:
+        - .env
+    db:
+      image: mysql:8.0
+      restart: always
+      ports:
+        - "3306:3306"
+      environment:
+        - MYSQL_ROOT_PASSWORD=${DATABASE_ROOT}
+        - MYSQL_DATABASE=${DATABASE_NAME}
+        - MYSQL_USER=${DATABASE_USER}
+        - MYSQL_PASSWORD=${DATABASE_PASSWORD}
+      volumes:
+        - mysql_data:/var/lib/mysql
+      env_file:
+        - .env
 
-volumes:
-  mysql_data:
+  volumes:
+    mysql_data:
