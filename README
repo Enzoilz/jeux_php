@@ -1,166 +1,119 @@
-# AI Survival — Survival Game
+# AI Surviva
 
 ## Overview
 
 AI Survival is a web-based survival game developed in PHP as part of a web development learning project.
 
-The player takes on the role of a survivor in a world disrupted by artificial intelligence. The objective is to survive for 30 days by managing resources, performing different actions, and making decisions that affect survival.
+The player must survive for 30 days by managing resources and making decisions that affect survival.
 
-The purpose of this project is to practice backend development fundamentals, database management, and the implementation of a dynamic web application.
+## Objectives
 
-## Learning Objectives
-
-This project focuses on the following skills:
-
-- Implementing business logic with PHP.
-- Handling HTML forms and HTTP requests.
-- Managing application state with PHP sessions.
-- Designing a relational database with MySQL.
-- Interacting with a database using PDO.
-- Validating user input and securing SQL queries.
-- Separating application logic from presentation using Twig.
-- Organizing source code and following development best practices.
-- Testing application features and documenting the project.
+- Practice PHP and backend development.
+- Handle HTML forms and HTTP requests.
+- Manage PHP sessions.
+- Store data in MySQL using PDO.
+- Learn input validation and SQL security.
+- Separate application logic from presentation using Twig.
+- Practice testing and documentation.
 
 ## Features
 
 ### Game Management
 
 - Start a new game.
-- Display the survivor's current status.
-- Preserve game information between requests.
+- View the survivor's status.
 - Restart a game.
 
-### Resource Management
+### Resources
 
-The player must manage four main resources:
+- Health
+- Energy
+- Food
+- Materials
 
-- **Health:** Represents the survivor's physical condition.
-- **Energy:** Determines the survivor's ability to perform actions.
-- **Food:** Provides the resources needed to satisfy hunger.
-- **Materials:** Are used to repair and maintain the shelter.
-
-### Available Actions
-
-The player can perform several actions to improve their chances of survival:
+### Actions
 
 - Search for food.
 - Rest to recover energy.
 - Gather materials.
 - Repair the shelter.
 
-Each action affects the survivor's resources according to the game's rules.
-
 ### Survival System
 
 - Manage hunger and food consumption.
 - Advance through the days.
-- Apply the consequences of player actions to resources.
-- Trigger defeat when health reaches zero.
-- Trigger victory after surviving 30 days.
+- Apply action consequences to resources.
+- Lose when health reaches zero.
+- Win after surviving 30 days.
 
 ## Technologies
 
-- **PHP:** Game logic and request handling.
-- **MySQL:** Database management and data storage.
-- **PDO:** Database access.
-- **HTML5:** Page structure and forms.
-- **Twig:** Template rendering.
-- **PHP Sessions:** Maintaining game state between requests.
-- **Git:** Source code version control.
-
-## Project Structure
-
-The application is intended to separate responsibilities between request handling, game logic, database access, and presentation.
-
-The final project structure will be documented as development progresses.
+- PHP
+- MySQL
+- PDO
+- HTML5
+- Twig
+- PHP Sessions
+- Git
 
 ## Installation
 
 ### Prerequisites
 
-- PHP with the required PDO and MySQL extensions.
+- PHP with PDO and the MySQL extension.
 - MySQL.
 - Composer.
-- A PHP-compatible web server or PHP's built-in development server.
 
 ### Setup
 
-1. Clone the repository:
-
-   ```bash
+1. Clone the repository.
+   ```
    git clone <REPOSITORY_URL>
    cd ai-survival
    ```
-
-2. Install the PHP dependencies:
-
-   ```bash
+2. Install dependencies.
+   ```
    composer install
    ```
-
-3. Create a MySQL database.
-
-4. Execute the SQL database creation script from the `sql/` directory once it is available.
-
-5. Configure the database connection settings according to the project configuration.
-
-6. Start the application using PHP's built-in development server, if supported by the final project structure:
-
-   ```bash
+3. Create the MySQL database.
+4. Execute the SQL schema when available.
+5. Configure the database connection.
+6. Start the development server when the application structure is ready.
+   ```
    php -S localhost:8000 -t public
    ```
-
-7. Open the application in your browser at `http://localhost:8000`.
-
-The installation steps may be updated as the project evolves.
-
-## Database Design
-
-The database design will include:
-
-- An entity-relationship diagram or conceptual data model.
-- A logical data model.
-- An SQL script to create the required database tables.
-
-The schema will be designed according to the application's data persistence requirements, including game state and optional action history.
+7. Open `http://localhost:8000` in your browser.
 
 ## Security
 
-The project will focus on the following security practices:
-
-- Using prepared statements with PDO.
-- Validating data received from forms.
-- Escaping output rendered in templates.
-- Validating requested player actions.
-- Preventing invalid or inconsistent resource values.
-- Managing PHP sessions correctly.
+- Use prepared statements with PDO.
+- Validate form input.
+- Escape output rendered in templates.
+- Validate player actions.
+- Prevent invalid resource values.
+- Manage PHP sessions correctly.
 
 ## Testing
 
-Testing will cover the following scenarios:
-
 - Starting and restarting a game.
-- Applying the effects of each action.
-- Managing hunger and food consumption.
+- Applying action effects.
+- Managing hunger and food.
 - Advancing through the days.
-- Winning after 30 days of survival.
+- Winning after 30 days.
 - Losing when health reaches zero.
-- Validating input and handling edge cases.
+- Handling invalid input and edge cases.
 
 ## Project Status
 
-**In development.**
+In development.
 
-Features, game rules, and architecture may evolve throughout the learning and testing process.
+Features and architecture may evolve throughout the learning process.
 
 ## Educational Purpose
 
-This project is developed for educational purposes to practice and improve backend web development skills.
+This project is intended to practice PHP, MySQL, PDO, PHP sessions, and Twig.
 
-It is intended to strengthen the understanding of PHP, MySQL, PDO, PHP sessions, and Twig.
-
-This is a learning project, not a commercial product or a production-ready application.
+It is a learning project, not a commercial product or production-ready application.
 
 ## License
 
