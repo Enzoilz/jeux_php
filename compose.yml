@@ -1,6 +1,6 @@
 name: JeuxPHP
 services:
-  API:
+  api:
     build: .
     working_dir: /usr/app
     ports:
@@ -8,9 +8,6 @@ services:
     volumes:
       - .:/usr/app
     command: php -init
-    depends_on:
-      db:
-        condition: service_healthy
     env_file:
       - .env
   db:
@@ -22,4 +19,10 @@ services:
       - MYSQL_DATABASE=${DATABASENAME}
       - MYSQL_USER=${DATABASEUSER}
       - MYSQL_PASSWORD=${DATABASEPASSWORD}
-      -
+    volumes:
+      - mysql_data:/var/lib/mysql
+    env_file:
+      - .env
+
+volumes:
+  mysql_data
